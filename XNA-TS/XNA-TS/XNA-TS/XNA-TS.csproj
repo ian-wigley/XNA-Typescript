@@ -28,6 +28,8 @@
     <TypeScriptCompile Include="Game.ts" />
     <TypeScriptCompile Include="GameClock.ts" />
     <TypeScriptCompile Include="GameTime.ts" />
+    <TypeScriptCompile Include="Matrix.ts" />
+    <TypeScriptCompile Include="Quaternion.ts" />
     <TypeScriptCompile Include="TestGame.ts" />
     <TypeScriptCompile Include="Point.ts" />
     <TypeScriptCompile Include="Program.ts" />
@@ -35,6 +37,7 @@
     <TypeScriptCompile Include="SpriteBatch.ts" />
     <TypeScriptCompile Include="TimeSpan.ts" />
     <TypeScriptCompile Include="Vector2.ts" />
+    <TypeScriptCompile Include="Vector3.ts" />
   </ItemGroup>
   <ItemGroup>
     <None Include="web.Debug.config">
