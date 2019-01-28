@@ -25,9 +25,13 @@
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="BoundingBox.ts" />
+    <TypeScriptCompile Include="Color.ts" />
     <TypeScriptCompile Include="Game.ts" />
     <TypeScriptCompile Include="GameClock.ts" />
+    <TypeScriptCompile Include="GamePadState.ts" />
     <TypeScriptCompile Include="GameTime.ts" />
+    <TypeScriptCompile Include="KeyboardState.ts" />
     <TypeScriptCompile Include="Matrix.ts" />
     <TypeScriptCompile Include="Quaternion.ts" />
     <TypeScriptCompile Include="TestGame.ts" />

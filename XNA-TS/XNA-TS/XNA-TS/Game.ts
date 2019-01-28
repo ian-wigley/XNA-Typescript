@@ -1,4 +1,6 @@
-﻿class Game {
+﻿type Texture2D = HTMLImageElement;
+
+class Game {
 
     private maximumElapsedTime: TimeSpan;
     private gameTime: GameTime = new GameTime();
@@ -22,6 +24,7 @@
     private doneFirstDraw: boolean = false;
     private forceElapsedTimeToZero: boolean = false;
     private suppressDraw: boolean = false;
+    private spriteBatch: SpriteBatch;
 
     constructor() {
         this.maximumElapsedTime = new TimeSpan(0);
@@ -32,6 +35,8 @@
         this.lastFrameElapsedGameTime = new TimeSpan(0);
         this.targetElapsedTime.SetTicks(166667);
         this.inactiveSleepTime = this.inactiveSleepTime.FromMilliseconds(20.0);
+        this.spriteBatch = new SpriteBatch();
+        this.AddHitListener(this.spriteBatch.Canvas);
     }
 
     public get MaxElapsedTime(): TimeSpan {
@@ -187,5 +192,77 @@
 
     protected Update(gameTime: GameTime): void {
         this.doneFirstUpdate = true;
+    }
+
+    private AddHitListener(element: HTMLElement): void {
+        window.addEventListener("keydown", (event) => {
+            this.onKeyPress(event);
+            return null;
+        });
+
+        window.addEventListener("keyup", (event) => {
+            this.onKeyUp(event);
+            return null;
+        });
+    }
+
+    private onKeyPress(event: KeyboardEvent) {
+        event.preventDefault();
+        this.onKeyboardPress(event, false);
+    }
+
+    private onKeyUp(event: KeyboardEvent) {
+        event.preventDefault();
+        this.onKeyboardRelease(event, false);
+    }
+
+    private onKeyboardPress(event: Event, touchDevice: boolean) {
+        switch (((<number>(<KeyboardEvent>event).keyCode | 0))) {
+            case 17:
+                Keys.Ctrl = true;
+                break;
+            case 37:
+                Keys.Left = true;
+                break;
+            case 38:
+                Keys.Up = true;
+                break;
+            case 39:
+                Keys.Right = true;
+                break;
+            case 40:
+                Keys.Down = true;
+                break;
+            case 13:
+                break;
+            case 32:
+                Keys.Space = true;
+                break;
+        }
+    }
+
+    private onKeyboardRelease(event: Event, touchDevice: boolean) {
+        switch (((<number>(<KeyboardEvent>event).keyCode | 0))) {
+            case 17:
+                Keys.Ctrl = false;
+                break;
+            case 37:
+                Keys.Left = false;
+                break;
+            case 38:
+                Keys.Up = false;
+                break;
+            case 39:
+                Keys.Right = false;
+                break;
+            case 40:
+                Keys.Up = false;
+                break;
+            case 13:
+                break;
+            case 32:
+                Keys.Space = false;
+                break;
+        }
     }
 }
