@@ -25,7 +25,6 @@
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Controls.ts" />
     <TypeScriptCompile Include="Game.ts" />
     <TypeScriptCompile Include="GameClock.ts" />
     <TypeScriptCompile Include="GameTime.ts" />
