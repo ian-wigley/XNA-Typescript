@@ -24,10 +24,12 @@ class Game {
     private doneFirstDraw: boolean = false;
     private forceElapsedTimeToZero: boolean = false;
     private suppressDraw: boolean = false;
-    private spriteBatch: SpriteBatch;
+    private content: ContentManager;
+    protected spriteBatch: SpriteBatch;
 
     constructor() {
         this.maximumElapsedTime = new TimeSpan(0);
+        this.content = new ContentManager(/*(IServiceProvider) this.gameServices*/);
         this.clock = new GameClock();
         this.maximumElapsedTime = this.maximumElapsedTime.FromMilliseconds(500.0);
         this.totalGameTime = new TimeSpan(0);
@@ -37,6 +39,25 @@ class Game {
         this.inactiveSleepTime = this.inactiveSleepTime.FromMilliseconds(20.0);
         this.spriteBatch = new SpriteBatch();
         this.AddHitListener(this.spriteBatch.Canvas);
+    }
+
+    public Run(gameTime): void {
+        this.Draw(gameTime);
+    }
+
+    public get GraphicsDevice() {
+        return this.spriteBatch;
+    }
+
+    public get Content() {
+        return this.content;
+    }
+
+    public set Content(value) {
+        if (value == null) {
+            console.log("ArgumentNullException");
+        }
+        this.content = value;
     }
 
     public get MaxElapsedTime(): TimeSpan {
@@ -81,6 +102,9 @@ class Game {
 
     public RunGame(useBlockingRun: boolean): void {
         try {
+
+            this.Initialize();
+
             this.inRun = true;
             this.gameTime.ElapsedGameTime.Zero;
             this.gameTime.TotalGameTime = this.totalGameTime;
@@ -194,6 +218,20 @@ class Game {
         this.doneFirstUpdate = true;
     }
 
+
+    protected Initialize(): void {
+        //this.HookDeviceEvents();
+        //while (this.notYetInitialized.Count != 0) {
+        //    this.notYetInitialized[0].Initialize();
+        //    this.notYetInitialized.RemoveAt(0);
+        //}
+        //if (this.graphicsDeviceService == null || this.graphicsDeviceService.GraphicsDevice == null)
+        //    return;
+        this.LoadContent();
+    }
+
+    protected LoadContent(): void { }
+
     private AddHitListener(element: HTMLElement): void {
         window.addEventListener("keydown", (event) => {
             this.onKeyPress(event);
@@ -219,7 +257,7 @@ class Game {
     private onKeyboardPress(event: Event, touchDevice: boolean) {
         switch (((<number>(<KeyboardEvent>event).keyCode | 0))) {
             case 17:
-                Keys.Ctrl = true;
+                Keys.LeftControl = true;
                 break;
             case 37:
                 Keys.Left = true;
@@ -238,13 +276,17 @@ class Game {
             case 32:
                 Keys.Space = true;
                 break;
+            case 88:
+            case 120:
+                Keys.X = true;
+                break;
         }
     }
 
     private onKeyboardRelease(event: Event, touchDevice: boolean) {
         switch (((<number>(<KeyboardEvent>event).keyCode | 0))) {
             case 17:
-                Keys.Ctrl = false;
+                Keys.LeftControl = false;
                 break;
             case 37:
                 Keys.Left = false;
@@ -262,6 +304,9 @@ class Game {
                 break;
             case 32:
                 Keys.Space = false;
+                break;
+            case 120:
+                Keys.X = false;
                 break;
         }
     }

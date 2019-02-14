@@ -67,14 +67,9 @@ class GamePad {
         return this.Button;
     }
 
-
     constructor() { }
 
     public static GetState(one) {
         return this;
     }
-
-
-
-
 }

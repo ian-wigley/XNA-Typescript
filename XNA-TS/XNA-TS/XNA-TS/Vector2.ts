@@ -35,10 +35,8 @@ class Vector2 {
             flag = this.Equals(<Vector2>obj);
         return flag;
     }
-
     public GetHashCode(): number {
-        //this.X.GetHashCode() + this.Y.GetHashCode();
-        return 0;
+        return 0;//this.X.GetHashCode() + this.Y.GetHashCode();
     }
 
     public Length(): number {
@@ -277,7 +275,6 @@ class Vector2 {
         vector2.Y = num10;
         return vector2;
     }
-
     public static Transform3(value: Vector2, rotation: Quaternion, result: Vector2): void {
         var num1: number = rotation.X + rotation.X;
         var num2: number = rotation.Y + rotation.Y;
@@ -292,7 +289,6 @@ class Vector2 {
         result.X = num9;
         result.Y = num10;
     }
-
     public static Transform4(sourceArray: Vector2[], matrix: Matrix, destinationArray: Vector2[]): void {
         if (sourceArray == null) { }
         //throw new ArgumentNullException(nameof(sourceArray));
@@ -307,7 +303,6 @@ class Vector2 {
             destinationArray[index].Y = <number>(<number>x * <number>matrix.M12 + <number>y * <number>matrix.M22) + matrix.M42;
         }
     }
-
     public static Transform5(sourceArray: Vector2[], sourceIndex: number, matrix: Matrix, destinationArray: Vector2[], destinationIndex: number, length: number): void {
         if (sourceArray == null) { }
         //throw new ArgumentNullException(nameof(sourceArray));
@@ -353,7 +348,6 @@ class Vector2 {
             destinationArray[index].Y = <number>(<number>x * <number>num11 + <number>y * <number>num12);
         }
     }
-
     public static Transform7(sourceArray: Vector2[], sourceIndex: number, rotation: Quaternion, destinationArray: Vector2[], destinationIndex: number, length: number): void {
         if (sourceArray == null) { }
         //throw new ArgumentNullException(nameof(sourceArray));
@@ -384,7 +378,6 @@ class Vector2 {
             ++destinationIndex;
         }
     }
-
     public static TransformNormal(normal: Vector2, matrix: Matrix): Vector2 {
         var num1: number = <number>(<number>normal.X * <number>matrix.M11 + <number>normal.Y * <number>matrix.M21);
         var num2: number = <number>(<number>normal.X * <number>matrix.M12 + <number>normal.Y * <number>matrix.M22);
@@ -393,7 +386,6 @@ class Vector2 {
         vector2.Y = num2;
         return vector2;
     }
-
     public static TransformNormal1(normal: Vector2, matrix: Matrix, result: Vector2): void {
         var num1: number = <number>(<number>normal.X * <number>matrix.M11 + <number>normal.Y * <number>matrix.M21);
         var num2: number = <number>(<number>normal.X * <number>matrix.M12 + <number>normal.Y * <number>matrix.M22);
@@ -415,7 +407,6 @@ class Vector2 {
             destinationArray[index].Y = <number>(<number>x * <number>matrix.M12 + <number>y * <number>matrix.M22);
         }
     }
-
     public static TransformNormal3(sourceArray: Vector2[], sourceIndex: number, matrix: Matrix, destinationArray: Vector2[], destinationIndex: number, length: number): void {
         if (sourceArray == null) { }
         //throw new ArgumentNullException(nameof(sourceArray));
@@ -434,79 +425,66 @@ class Vector2 {
             ++destinationIndex;
         }
     }
-
     public static Negate(value: Vector2): Vector2 {
         var vector2: Vector2;
         vector2.X = -value.X;
         vector2.Y = -value.Y;
         return vector2;
     }
-
     public static Negate1(value: Vector2, result: Vector2): void {
         result.X = -value.X;
         result.Y = -value.Y;
     }
-
     public static Add(value1: Vector2, value2: Vector2): Vector2 {
         var vector2: Vector2;
         vector2.X = value1.X + value2.X;
         vector2.Y = value1.Y + value2.Y;
         return vector2;
     }
-
     public static Add1(value1: Vector2, value2: Vector2, result: Vector2): void {
         result.X = value1.X + value2.X;
         result.Y = value1.Y + value2.Y;
     }
-
     public static Subtract(value1: Vector2, value2: Vector2): Vector2 {
         var vector2: Vector2;
         vector2.X = value1.X - value2.X;
         vector2.Y = value1.Y - value2.Y;
         return vector2;
     }
-
     public static Subtract2(value1: Vector2, value2: Vector2, result: Vector2): void {
         result.X = value1.X - value2.X;
         result.Y = value1.Y - value2.Y;
     }
-
     public static Multiply(value1: Vector2, value2: Vector2): Vector2 {
         var vector2: Vector2;
         vector2.X = value1.X * value2.X;
         vector2.Y = value1.Y * value2.Y;
         return vector2;
     }
-
     public static Multiply1(value1: Vector2, value2: Vector2, result: Vector2): void {
         result.X = value1.X * value2.X;
         result.Y = value1.Y * value2.Y;
     }
-
     public static Multiply2(value1: Vector2, scaleFactor: number): Vector2 {
         var vector2: Vector2;
         vector2.X = value1.X * scaleFactor;
         vector2.Y = value1.Y * scaleFactor;
         return vector2;
     }
-
     public static Multiply3(value1: Vector2, scaleFactor: number, result: Vector2): void {
         result.X = value1.X * scaleFactor;
         result.Y = value1.Y * scaleFactor;
     }
-
     public static Divide(value1: Vector2, value2: Vector2): Vector2 {
         var vector2: Vector2;
         vector2.X = value1.X / value2.X;
         vector2.Y = value1.Y / value2.Y;
         return vector2;
     }
-
     public static Divide1(value1: Vector2, value2: Vector2, result: Vector2): void {
         result.X = value1.X / value2.X;
         result.Y = value1.Y / value2.Y;
     }
-
     public static Divide2(value1: Vector2, divider: number): Vector2 {
         var num: number = 1 / divider;
         var vector2: Vector2;
@@ -514,11 +492,9 @@ class Vector2 {
         vector2.Y = value1.Y * num;
         return vector2;
     }
-
     public static Divide3(value1: Vector2, divider: number, result: Vector2): void {
         var num: number = 1 / divider;
         result.X = value1.X * num;
         result.Y = value1.Y * num;
     }
-
 }

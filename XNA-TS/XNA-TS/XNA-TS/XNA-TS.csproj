@@ -10,7 +10,6 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
-    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -27,10 +26,12 @@
   <ItemGroup>
     <TypeScriptCompile Include="BoundingBox.ts" />
     <TypeScriptCompile Include="Color.ts" />
+    <TypeScriptCompile Include="ContentManager.ts" />
     <TypeScriptCompile Include="Game.ts" />
     <TypeScriptCompile Include="GameClock.ts" />
     <TypeScriptCompile Include="GamePadState.ts" />
     <TypeScriptCompile Include="GameTime.ts" />
+    <TypeScriptCompile Include="GraphicsDeviceManager.ts" />
     <TypeScriptCompile Include="KeyboardState.ts" />
     <TypeScriptCompile Include="Matrix.ts" />
     <TypeScriptCompile Include="Quaternion.ts" />
