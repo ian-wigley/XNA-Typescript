@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "amd",
+    "outDir": "out",
+    "sourceMap": true,
+    "allowJs": true,
+    "checkJs": false,
+    //"strict": true,
+  },
+  "include": ["src"]
+}
