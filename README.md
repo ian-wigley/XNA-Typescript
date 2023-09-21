@@ -1,13 +1,8 @@
 # XNA-Typescript
-XNA port to Typescript
+C# XNA port to Typescript
 
-This is a very early attempt to convert XNA to Typescript & currently only supports 2d.
-
-Drawing is handled by the HTML Canvas at present.
-
-
-
-module TestGame {
+This is an early attempt to convert the C# XNA library to Typescript.
+<br>Drawing is 2d only at the moment via the HTML Canvas.
 
     /// <summary>
     /// This is the main type for your game
@@ -61,7 +56,7 @@ module TestGame {
         protected Draw(gameTime: GameTime): void {
             this.GraphicsDevice.Clear(Color.CornflowerBlue);
         }
-    }
+
 }
 
 Will yield something like this:
