@@ -1,4 +1,4 @@
-﻿import { Vector3 } from "./vector3";
+import { Vector3 } from "./vector3";
 
 export class Matrix {
 
@@ -19,13 +19,11 @@ export class Matrix {
     public M43: number;
     public M44: number;
 
-    Translation: any;
-
     public static CreateTranslation(x: number, y: number, z: number): Matrix {
         throw new Error("Method not implemented.");
     }
 
-    private static _identity:Matrix  = new Matrix(1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0);
+    private static _identity: Matrix = new Matrix(1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0);
 
     public static get Identity(): Matrix {
         return Matrix._identity;
@@ -59,96 +57,75 @@ export class Matrix {
         this.M23 = -value.Z;
     }
 
-    // public Vector3 Right
-    // {
-    //     get
-    //     {
-    //                 Vector3 vector3;
-    //         vector3.X = this.M11;
-    //         vector3.Y = this.M12;
-    //         vector3.Z = this.M13;
-    //         return vector3;
-    //     }
-    //     set
-    //     {
-    //         this.M11 = value.X;
-    //         this.M12 = value.Y;
-    //         this.M13 = value.Z;
-    //     }
-    // }
+    public get Right(): Vector3 {
+        let vector3: Vector3;
+        vector3.X = this.M11;
+        vector3.Y = this.M12;
+        vector3.Z = this.M13;
+        return vector3;
+    }
 
-    // public Vector3 Left
-    // {
-    //     get
-    //     {
-    //                 Vector3 vector3;
-    //         vector3.X = -this.M11;
-    //         vector3.Y = -this.M12;
-    //         vector3.Z = -this.M13;
-    //         return vector3;
-    //     }
-    //     set
-    //     {
-    //         this.M11 = -value.X;
-    //         this.M12 = -value.Y;
-    //         this.M13 = -value.Z;
-    //     }
-    // }
+    public set Right(value) {
+        this.M11 = value.X;
+        this.M12 = value.Y;
+        this.M13 = value.Z;
+    }
 
-    //         public Vector3 Forward
-    // {
-    //     get
-    //     {
-    //                 Vector3 vector3;
-    //         vector3.X = -this.M31;
-    //         vector3.Y = -this.M32;
-    //         vector3.Z = -this.M33;
-    //         return vector3;
-    //     }
-    //     set
-    //     {
-    //         this.M31 = -value.X;
-    //         this.M32 = -value.Y;
-    //         this.M33 = -value.Z;
-    //     }
-    // }
+    public get Left(): Vector3 {
+        let vector3: Vector3;
+        vector3.X = -this.M11;
+        vector3.Y = -this.M12;
+        vector3.Z = -this.M13;
+        return vector3;
+    }
 
-    //         public Vector3 Backward
-    // {
-    //     get
-    //     {
-    //                 Vector3 vector3;
-    //         vector3.X = this.M31;
-    //         vector3.Y = this.M32;
-    //         vector3.Z = this.M33;
-    //         return vector3;
-    //     }
-    //     set
-    //     {
-    //         this.M31 = value.X;
-    //         this.M32 = value.Y;
-    //         this.M33 = value.Z;
-    //     }
-    // }
+    public set Left(value) {
+        this.M11 = -value.X;
+        this.M12 = -value.Y;
+        this.M13 = -value.Z;
+    }
 
-    //         public Vector3 Translation
-    // {
-    //     get
-    //     {
-    //                 Vector3 vector3;
-    //         vector3.X = this.M41;
-    //         vector3.Y = this.M42;
-    //         vector3.Z = this.M43;
-    //         return vector3;
-    //     }
-    //     set
-    //     {
-    //         this.M41 = value.X;
-    //         this.M42 = value.Y;
-    //         this.M43 = value.Z;
-    //     }
-    // }
+    public get Forward(): Vector3 {
+        let vector3: Vector3;
+        vector3.X = -this.M31;
+        vector3.Y = -this.M32;
+        vector3.Z = -this.M33;
+        return vector3;
+    }
 
+    public set Forward(value) {
+        this.M31 = -value.X;
+        this.M32 = -value.Y;
+        this.M33 = -value.Z;
+    }
+
+    public get Backward(): Vector3 {
+        let vector3: Vector3;
+        vector3.X = this.M31;
+        vector3.Y = this.M32;
+        vector3.Z = this.M33;
+        return vector3;
+    }
+
+    public set Backward(value) {
+        this.M31 = value.X;
+        this.M32 = value.Y;
+        this.M33 = value.Z;
+    }
+
+    public get Translation(): Vector3 {
+        let vector3: Vector3;
+        vector3.X = this.M41;
+        vector3.Y = this.M42;
+        vector3.Z = this.M43;
+        return vector3;
+    }
+
+    public set Translation(value) {
+        this.M41 = value.X;
+        this.M42 = value.Y;
+        this.M43 = value.Z;
+    }
 
     constructor(m11: number, m12: number, m13: number, m14: number, m21: number, m22: number, m23: number, m24: number, m31: number, m32: number, m33: number, m34: number, m41: number, m42: number, m43: number, m44: number) {
         this.M11 = m11;
@@ -169,41 +146,42 @@ export class Matrix {
         this.M44 = m44;
     }
 
-//         public static Matrix CreateBillboard(Vector3 objectPosition, Vector3 cameraPosition, Vector3 cameraUpVector, Vector3 ? cameraForwardVector)
-// {
-//             Vector3 result1;
-//     result1.X = objectPosition.X - cameraPosition.X;
-//     result1.Y = objectPosition.Y - cameraPosition.Y;
-//     result1.Z = objectPosition.Z - cameraPosition.Z;
-//             float num = result1.LengthSquared();
-//     if ((double)num < 9.99999974737875E-05)
-//     result1 = cameraForwardVector.HasValue ? -cameraForwardVector.Value : Vector3.Forward;
-//             else
-//     Vector3.Multiply(ref result1, 1f / (float)Math.Sqrt((double)num), out result1);
-//             Vector3 result2;
-//     Vector3.Cross(ref cameraUpVector, ref result1, out result2);
-//     result2.Normalize();
-//             Vector3 result3;
-//     Vector3.Cross(ref result1, ref result2, out result3);
-//             Matrix matrix;
-//     matrix.M11 = result2.X;
-//     matrix.M12 = result2.Y;
-//     matrix.M13 = result2.Z;
-//     matrix.M14 = 0.0f;
-//     matrix.M21 = result3.X;
-//     matrix.M22 = result3.Y;
-//     matrix.M23 = result3.Z;
-//     matrix.M24 = 0.0f;
-//     matrix.M31 = result1.X;
-//     matrix.M32 = result1.Y;
-//     matrix.M33 = result1.Z;
-//     matrix.M34 = 0.0f;
-//     matrix.M41 = objectPosition.X;
-//     matrix.M42 = objectPosition.Y;
-//     matrix.M43 = objectPosition.Z;
-//     matrix.M44 = 1f;
-//     return matrix;
-// }
+    public static CreateBillboard(objectPosition: Vector3, cameraPosition: Vector3, cameraUpVectorVector3, cameraForwardVector: ?Vector3): Matrix {
+        let result1: Vector3;
+        result1.X = objectPosition.X - cameraPosition.X;
+        result1.Y = objectPosition.Y - cameraPosition.Y;
+        result1.Z = objectPosition.Z - cameraPosition.Z;
+        //     let num = result1.LengthSquared();
+        //     if (num < 9.99999974737875E-05) {
+        //          result1 = cameraForwardVector.HasValue ? -cameraForwardVector.Value : Vector3.Forward;
+        //     }
+        //     else {
+        //     Vector3.Multiply(ref result1, 1f / Math.Sqrt(num), out result1);
+        //     }
+        let result2: Vector3;
+        //     Vector3.Cross(ref cameraUpVector, ref result1, out result2);
+        //     result2.Normalize();
+        let result3: Vector3;
+        //     Vector3.Cross(ref result1, ref result2, out result3);
+        let matrix: Matrix;
+        //     matrix.M11 = result2.X;
+        //     matrix.M12 = result2.Y;
+        //     matrix.M13 = result2.Z;
+        //     matrix.M14 = 0.0f;
+        //     matrix.M21 = result3.X;
+        //     matrix.M22 = result3.Y;
+        //     matrix.M23 = result3.Z;
+        //     matrix.M24 = 0.0f;
+        //     matrix.M31 = result1.X;
+        //     matrix.M32 = result1.Y;
+        //     matrix.M33 = result1.Z;
+        //     matrix.M34 = 0.0f;
+        //     matrix.M41 = objectPosition.X;
+        //     matrix.M42 = objectPosition.Y;
+        //     matrix.M43 = objectPosition.Z;
+        //     matrix.M44 = 1f;
+        return matrix;
+    }
 
 //         public static void CreateBillboard(ref Vector3 objectPosition, ref Vector3 cameraPosition, ref Vector3 cameraUpVector, Vector3 ? cameraForwardVector, out Matrix result)
 // {
@@ -2289,6 +2267,7 @@ export class Matrix {
 //     matrix.M44 = matrix1.M44 * num;
 //     return matrix;
 // }
+}
 
 export class CanonicalBasis {
     public Row0: Vector3;
@@ -2297,10 +2276,7 @@ export class CanonicalBasis {
 }
 
 export class VectorBasis {
-    public Element0: Vector3* ;
-    public Element1: Vector3* ;
-    public Element2: Vector3* ;
-}
-
-    }
+    public Element0: Vector3;
+    public Element1: Vector3;
+    public Element2: Vector3;
 }
