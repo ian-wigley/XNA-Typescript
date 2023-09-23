@@ -1,6 +1,5 @@
-﻿enum SpriteEffects {
-    None
-}
+export enum SpriteEffects { None }
+export type Texture2D = HTMLImageElement;
 
 class SpriteBatch {
 
