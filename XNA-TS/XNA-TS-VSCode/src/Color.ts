@@ -1,146 +1,142 @@
-﻿class Color {
-
-    constructor(col) { /* TODO document why this constructor is empty */ }
-
-    public static get AliceBlue(): string { return "AliceBlue"; }
-    public static get AntiqueWhite(): string { return "AntiqueWhite"; }
-    public static get Aqua(): string { return "Aqua"; }
-    public static get Aquamarine(): string { return "Aquamarine"; }
-    public static get Azure(): string { return "Azure"; }
-    public static get Beige(): string { return "Beige"; }
-    public static get Bisque(): string { return "Bisque"; }
-    public static get Black(): string { return "Black"; }
-    public static get BlanchedAlmond(): string { return "BlanchedAlmond"; }
-    public static get Blue(): string { return "Blue"; }
-    public static get BlueViolet(): string { return "BlueViolet"; }
-    public static get Brown(): string { return "Brown"; }
-    public static get BurlyWood(): string { return "BurlyWood"; }
-    public static get CadetBlue(): string { return "CadetBlue"; }
-    public static get Chartreuse(): string { return "Chartreuse"; }
-    public static get Chocolate(): string { return "Chocolate"; }
-    public static get Coral(): string { return "Coral"; }
-    public static get CornflowerBlue(): string { return "CornflowerBlue"; }
-    public static get Cornsilk(): string { return "Cornsilk"; }
-    public static get Crimson(): string { return "Crimson"; }
-    public static get Cyan(): string { return "Cyan"; }
-    public static get DarkBlue(): string { return "DarkBlue"; }
-    public static get DarkCyan(): string { return "DarkCyan"; }
-    public static get DarkGoldenrod(): string { return "DarkGoldenrod"; }
-    public static get DarkGray(): string { return "DarkGray"; }
-    public static get DarkGreen(): string { return "DarkGreen"; }
-    public static get DarkKhaki(): string { return "DarkKhaki"; }
-    public static get DarkMagenta(): string { return "DarkMagenta"; }
-    public static get DarkOliveGreen(): string { return "DarkOliveGreen"; }
-    public static get DarkOrange(): string { return "DarkOrange"; }
-    public static get DarkOrchid(): string { return "DarkOrchid"; }
-    public static get DarkRed(): string { return "DarkRed"; }
-    public static get DarkSalmon(): string { return "DarkSalmon"; }
-    public static get DarkSeaGreen(): string { return "DarkSeaGreen"; }
-    public static get DarkSlateBlue(): string { return "DarkSlateBlue"; }
-    public static get DarkSlateGray(): string { return "DarkSlateGray"; }
-    public static get DarkTurquoise(): string { return "DarkTurquoise"; }
-    public static get DarkViolet(): string { return "DarkViolet"; }
-    public static get DeepPink(): string { return "DeepPink"; }
-    public static get DeepSkyBlue(): string { return "DeepSkyBlue"; }
-    public static get DimGray(): string { return "DimGray"; }
-    public static get DodgerBlue(): string { return "DodgerBlue"; }
-    public static get Firebrick(): string { return "Firebrick"; }
-    public static get FloralWhite(): string { return "FloralWhite"; }
-    public static get ForestGreen(): string { return "ForestGreen"; }
-    public static get Fuchsia(): string { return "Fuchsia"; }
-    public static get Gainsboro(): string { return "Gainsboro"; }
-    public static get GhostWhite(): string { return "GhostWhite"; }
-    public static get Gold(): string { return "Gold"; }
-    public static get Goldenrod(): string { return "Goldenrod"; }
-    public static get Gray(): string { return "Gray"; }
-    public static get Green(): string { return "Green"; }
-    public static get GreenYellow(): string { return "GreenYellow"; }
-    public static get Honeydew(): string { return "Honeydew"; }
-    public static get HotPink(): string { return "HotPink"; }
-    public static get IndianRed(): string { return "IndianRed"; }
-    public static get Indigo(): string { return "Indigo"; }
-    public static get Ivory(): string { return "Ivory"; }
-    public static get Khaki(): string { return "Khaki"; }
-    public static get Lavender(): string { return "Lavender"; }
-    public static get LavenderBlush(): string { return "LavenderBlush"; }
-    public static get LawnGreen(): string { return "LawnGreen"; }
-    public static get LemonChiffon(): string { return "LemonChiffon"; }
-    public static get LightBlue(): string { return "LightBlue"; }
-    public static get LightCoral(): string { return "LightCoral"; }
-    public static get LightCyan(): string { return "LightCyan"; }
-    public static get LightGoldenrodYellow(): string { return "LightGoldenrodYellow"; }
-    public static get LightGreen(): string { return "LightGreen"; }
-    public static get LightGray(): string { return "LightGray"; }
-    public static get LightPink(): string { return "LightPink"; }
-    public static get LightSalmon(): string { return "LightSalmon"; }
-    public static get LightSeaGreen(): string { return "LightSeaGreen"; }
-    public static get LightSkyBlue(): string { return "LightSkyBlue"; }
-    public static get LightSlateGray(): string { return "LightSlateGray"; }
-    public static get LightSteelBlue(): string { return "LightSteelBlue"; }
-    public static get LightYellow(): string { return "LightYellow"; }
-    public static get Lime(): string { return "Lime"; }
-    public static get LimeGreen(): string { return "LimeGreen"; }
-    public static get Linen(): string { return "Linen"; }
-    public static get Magenta(): string { return "Magenta"; }
-    public static get Maroon(): string { return "Maroon"; }
-    public static get MediumAquamarine(): string { return "MediumAquamarine"; }
-    public static get MediumBlue(): string { return "MediumBlue"; }
-    public static get MediumOrchid(): string { return "MediumOrchid"; }
-    public static get MediumPurple(): string { return "MediumPurple"; }
-    public static get MediumSeaGreen(): string { return "MediumSeaGreen"; }
-    public static get MediumSlateBlue(): string { return "MediumSlateBlue"; }
-    public static get MediumSpringGreen(): string { return "MediumSpringGreen"; }
-    public static get MediumTurquoise(): string { return "MediumTurquoise"; }
-    public static get MediumVioletRed(): string { return "MediumVioletRed"; }
-    public static get MidnightBlue(): string { return "MidnightBlue"; }
-    public static get MintCream(): string { return "MintCream"; }
-    public static get MistyRose(): string { return "MistyRose"; }
-    public static get Moccasin(): string { return "Moccasin"; }
-    public static get NavajoWhite(): string { return "NavajoWhite"; }
-    public static get Navy(): string { return "Navy"; }
-    public static get OldLace(): string { return "OldLace"; }
-    public static get Olive(): string { return "Olive"; }
-    public static get OliveDrab(): string { return "OliveDrab"; }
-    public static get Orange(): string { return "Orange"; }
-    public static get OrangeRed(): string { return "OrangeRed"; }
-    public static get Orchid(): string { return "Orchid"; }
-    public static get PaleGoldenrod(): string { return "PaleGoldenrod"; }
-    public static get PaleGreen(): string { return "PaleGreen"; }
-    public static get PaleTurquoise(): string { return "PaleTurquoise"; }
-    public static get PaleVioletRed(): string { return "PaleVioletRed"; }
-    public static get PapayaWhip(): string { return "PapayaWhip"; }
-    public static get PeachPuff(): string { return "PeachPuff"; }
-    public static get Peru(): string { return "Peru"; }
-    public static get Pink(): string { return "Pink"; }
-    public static get Plum(): string { return "Plum"; }
-    public static get PowderBlue(): string { return "PowderBlue"; }
-    public static get Purple(): string { return "Purple"; }
-    public static get Red(): string { return "Red"; }
-    public static get RosyBrown(): string { return "RosyBrown"; }
-    public static get RoyalBlue(): string { return "RoyalBlue"; }
-    public static get SaddleBrown(): string { return "SaddleBrown"; }
-    public static get Salmon(): string { return "Salmon"; }
-    public static get SandyBrown(): string { return "SandyBrown"; }
-    public static get SeaGreen(): string { return "SeaGreen"; }
-    public static get SeaShell(): string { return "SeaShell"; }
-    public static get Sienna(): string { return "Sienna"; }
-    public static get Silver(): string { return "Silver"; }
-    public static get SkyBlue(): string { return "SkyBlue"; }
-    public static get SlateBlue(): string { return "SlateBlue"; }
-    public static get SlateGray(): string { return "SlateGray"; }
-    public static get Snow(): string { return "Snow"; }
-    public static get SpringGreen(): string { return "SpringGreen"; }
-    public static get SteelBlue(): string { return "SteelBlue"; }
-    public static get Tan(): string { return "Tan"; }
-    public static get Teal(): string { return "Teal"; }
-    public static get Thistle(): string { return "Thistle"; }
-    public static get Tomato(): string { return "Tomato"; }
-    public static get Turquoise(): string { return "Turquoise"; }
-    public static get Violet(): string { return "Violet"; }
-    public static get Wheat(): string { return "Wheat"; }
-    public static get White(): string { return "White"; }
-    public static get WhiteSmoke(): string { return "WhiteSmoke"; }
-    public static get Yellow(): string { return "Yellow"; }
-    public static get YellowGreen(): string { return "YellowGreen"; }
-
+export enum Color {
+    AliceBlue = "#F0F8FF",
+    AntiqueWhite = "#FAEBD7",
+    Aqua = "#00FFFF",
+    Aquamarine = "#7FFFD4",
+    Azure = "#F0FFFF",
+    Beige = "#F5F5DC",
+    Bisque = "#FFE4C4",
+    Black = "#000000",
+    BlanchedAlmond = "#FFEBCD",
+    Blue = "#0000FF",
+    BlueViolet = "#8A2BE2",
+    Brown = "#A52A2A",
+    BurlyWood = "#DEB887",
+    CadetBlue = "#5F9EA0",
+    Chartreuse = "#7FFF00",
+    Chocolate = "#D2691E",
+    Coral = "#FF7F50",
+    CornflowerBlue = "#6495ED",
+    Cornsilk = "#FFF8DC",
+    Crimson = "#DC143C",
+    Cyan = "#00FFFF",
+    DarkBlue = "#00008B",
+    DarkCyan = "#008B8B",
+    DarkGoldenrod = "#B8860B",
+    DarkGray = "#A9A9A9",
+    DarkGreen = "#006400",
+    DarkKhaki = "#BDB76B",
+    DarkMagenta = "#8B008B",
+    DarkOliveGreen = "#556B2F",
+    DarkOrange = "#FF8C00",
+    DarkOrchid = "#9932CC",
+    DarkRed = "#8B0000",
+    DarkSalmon = "#E9967A",
+    DarkSeaGreen = "#8FBC8F",
+    DarkSlateBlue = "#483D8B",
+    DarkSlateGray = "#2F4F4F",
+    DarkTurquoise = "#00CED1",
+    DarkViolet = "#9400D3",
+    DeepPink = "#FF1493",
+    DeepSkyBlue = "#00BFFF",
+    DimGray = "#696969",
+    DodgerBlue = "#1E90FF",
+    Firebrick = "#B22222",
+    FloralWhite = "#FFFAF0",
+    ForestGreen = "#228B22",
+    Fuchsia = "#FF00FF",
+    Gainsboro = "#DCDCDC",
+    GhostWhite = "#F8F8FF",
+    Gold = "#FFD700",
+    Goldenrod = "#DAA520",
+    Gray = "#808080",
+    Green = "#008000",
+    GreenYellow = "#ADFF2F",
+    Honeydew = "#F0FFF0",
+    HotPink = "#FF69B4",
+    IndianRed = "#CD5C5C",
+    Indigo = "#4B0082",
+    Ivory = "#FFFFF0",
+    Khaki = "#F0E68C",
+    Lavender = "#E6E6FA",
+    LavenderBlush = "#FFF0F5",
+    LawnGreen = "#7CFC00",
+    LemonChiffon = "#FFFACD",
+    LightBlue = "#000000",
+    LightCoral = "#000000",
+    LightCyan = "#000000",
+    LightGoldenrodYellow = "#000000",
+    LightGreen = "#000000",
+    LightGray = "#000000",
+    LightPink = "#000000",
+    LightSalmon = "#000000",
+    LightSeaGreen = "#000000",
+    LightSkyBlue = "#000000",
+    LightSlateGray = "#000000",
+    LightSteelBlue = "#000000",
+    LightYellow = "#000000",
+    Lime = "#000000",
+    LimeGreen = "#000000",
+    Linen = "#000000",
+    Magenta = "#000000",
+    Maroon = "#000000",
+    MediumAquamarine = "#000000",
+    MediumBlue = "#000000",
+    MediumOrchid = "#000000",
+    MediumPurple = "#000000",
+    MediumSeaGreen = "#000000",
+    MediumSlateBlue = "#000000",
+    MediumSpringGreen = "#000000",
+    MediumTurquoise = "#000000",
+    MediumVioletRed = "#000000",
+    MidnightBlue = "#000000",
+    MintCream = "#000000",
+    MistyRose = "#000000",
+    Moccasin = "#000000",
+    NavajoWhite = "#000000",
+    Navy = "#000000",
+    OldLace = "#000000",
+    Olive = "#000000",
+    OliveDrab = "#000000",
+    Orange = "#000000",
+    OrangeRed = "#000000",
+    Orchid = "#000000",
+    PaleGoldenrod = "#000000",
+    PaleGreen = "#000000",
+    PaleTurquoise = "#000000",
+    PaleVioletRed = "#000000",
+    PapayaWhip = "#000000",
+    PeachPuff = "#000000",
+    Peru = "#000000",
+    Pink = "#000000",
+    Plum = "#000000",
+    PowderBlue = "#000000",
+    Purple = "#000000",
+    Red = "#FF0000",
+    RosyBrown = "#000000",
+    RoyalBlue = "#000000",
+    SaddleBrown = "#000000",
+    Salmon = "#000000",
+    SandyBrown = "#000000",
+    SeaGreen = "#000000",
+    SeaShell = "#000000",
+    Sienna = "#000000",
+    Silver = "#000000",
+    SkyBlue = "#000000",
+    SlateBlue = "#000000",
+    SlateGray = "#000000",
+    Snow = "#000000",
+    SpringGreen = "#000000",
+    SteelBlue = "#000000",
+    Tan = "#000000",
+    Teal = "#000000",
+    Thistle = "#000000",
+    Tomato = "#000000",
+    Turquoise = "#40E0D0",
+    Violet = "#EE82EE",
+    Wheat = "#F5DEB3",
+    White = "#FFFFFF",
+    WhiteSmoke = "#F5F5F5",
+    Yellow = "#FFF000",
+    YellowGreen = "#9ACD32",
 }
