@@ -3,32 +3,24 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>XNA TypeScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript library</title>
     <link rel="stylesheet" href="app.css" type="text/css" />
-
 </head>
-<body>
 
+<body>
     <div id="container">
         <canvas id="canvas" width="800" height="600"></canvas>
     </div>
 
-    <script src="out/TimeSpan.js"></script>
-    <script src="out/Point.js"></script>
-    <script src="out/Vector2.js"></script>
-    <script src="out/Rectangle.js"></script>
-    <script src="out/GameClock.js"></script>
-    <script src="out/SpriteBatch.js"></script>
-    <script src="out/GameTime.js"></script>
-    <script src="out/ContentManager.js"></script>
-    <script src="out/GraphicsDeviceManager.js"></script>
-    <script src="out/Color.js"></script>
-    <script src="out/Program.js"></script>
-    <script src="out/Game.js"></script>
-    <script src="out/TestGame.js"></script>
-
+    <script type="module">
+        import {TestGame} from "./out/testGame.js"
+        let game = new TestGame();
+        game.RunGame(true);
+        setInterval(() => game.Tick(), 13);
+    </script>
 </body>
+
 </html>
 
 
