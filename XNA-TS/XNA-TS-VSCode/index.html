@@ -14,14 +14,12 @@
     </div>
 
     <script type="module">
-        import {TestGame} from "./out/testGame.js"
+        import { TestGame } from "./out/testGame.js"
         let game = new TestGame();
+        game.Initialize();
         game.RunGame(true);
-        setInterval(() => game.Tick(), 13);
+        game.Tick();
     </script>
 </body>
 
 </html>
-
-
-<!-- https://github.com/bersling/typescript-library-starter/blob/master/library-starter/package.json -->
