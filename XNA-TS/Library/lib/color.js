@@ -1,144 +1,144 @@
-export class Color {
-    // constructor(col) {
-    // }
-    static get AliceBlue() { return "AliceBlue"; }
-    static get AntiqueWhite() { return "AntiqueWhite"; }
-    static get Aqua() { return "Aqua"; }
-    static get Aquamarine() { return "Aquamarine"; }
-    static get Azure() { return "Azure"; }
-    static get Beige() { return "Beige"; }
-    static get Bisque() { return "Bisque"; }
-    static get Black() { return "Black"; }
-    static get BlanchedAlmond() { return "BlanchedAlmond"; }
-    static get Blue() { return "Blue"; }
-    static get BlueViolet() { return "BlueViolet"; }
-    static get Brown() { return "Brown"; }
-    static get BurlyWood() { return "BurlyWood"; }
-    static get CadetBlue() { return "CadetBlue"; }
-    static get Chartreuse() { return "Chartreuse"; }
-    static get Chocolate() { return "Chocolate"; }
-    static get Coral() { return "Coral"; }
-    static get CornflowerBlue() { return "CornflowerBlue"; }
-    static get Cornsilk() { return "Cornsilk"; }
-    static get Crimson() { return "Crimson"; }
-    static get Cyan() { return "Cyan"; }
-    static get DarkBlue() { return "DarkBlue"; }
-    static get DarkCyan() { return "DarkCyan"; }
-    static get DarkGoldenrod() { return "DarkGoldenrod"; }
-    static get DarkGray() { return "DarkGray"; }
-    static get DarkGreen() { return "DarkGreen"; }
-    static get DarkKhaki() { return "DarkKhaki"; }
-    static get DarkMagenta() { return "DarkMagenta"; }
-    static get DarkOliveGreen() { return "DarkOliveGreen"; }
-    static get DarkOrange() { return "DarkOrange"; }
-    static get DarkOrchid() { return "DarkOrchid"; }
-    static get DarkRed() { return "DarkRed"; }
-    static get DarkSalmon() { return "DarkSalmon"; }
-    static get DarkSeaGreen() { return "DarkSeaGreen"; }
-    static get DarkSlateBlue() { return "DarkSlateBlue"; }
-    static get DarkSlateGray() { return "DarkSlateGray"; }
-    static get DarkTurquoise() { return "DarkTurquoise"; }
-    static get DarkViolet() { return "DarkViolet"; }
-    static get DeepPink() { return "DeepPink"; }
-    static get DeepSkyBlue() { return "DeepSkyBlue"; }
-    static get DimGray() { return "DimGray"; }
-    static get DodgerBlue() { return "DodgerBlue"; }
-    static get Firebrick() { return "Firebrick"; }
-    static get FloralWhite() { return "FloralWhite"; }
-    static get ForestGreen() { return "ForestGreen"; }
-    static get Fuchsia() { return "Fuchsia"; }
-    static get Gainsboro() { return "Gainsboro"; }
-    static get GhostWhite() { return "GhostWhite"; }
-    static get Gold() { return "Gold"; }
-    static get Goldenrod() { return "Goldenrod"; }
-    static get Gray() { return "Gray"; }
-    static get Green() { return "Green"; }
-    static get GreenYellow() { return "GreenYellow"; }
-    static get Honeydew() { return "Honeydew"; }
-    static get HotPink() { return "HotPink"; }
-    static get IndianRed() { return "IndianRed"; }
-    static get Indigo() { return "Indigo"; }
-    static get Ivory() { return "Ivory"; }
-    static get Khaki() { return "Khaki"; }
-    static get Lavender() { return "Lavender"; }
-    static get LavenderBlush() { return "LavenderBlush"; }
-    static get LawnGreen() { return "LawnGreen"; }
-    static get LemonChiffon() { return "LemonChiffon"; }
-    static get LightBlue() { return "LightBlue"; }
-    static get LightCoral() { return "LightCoral"; }
-    static get LightCyan() { return "LightCyan"; }
-    static get LightGoldenrodYellow() { return "LightGoldenrodYellow"; }
-    static get LightGreen() { return "LightGreen"; }
-    static get LightGray() { return "LightGray"; }
-    static get LightPink() { return "LightPink"; }
-    static get LightSalmon() { return "LightSalmon"; }
-    static get LightSeaGreen() { return "LightSeaGreen"; }
-    static get LightSkyBlue() { return "LightSkyBlue"; }
-    static get LightSlateGray() { return "LightSlateGray"; }
-    static get LightSteelBlue() { return "LightSteelBlue"; }
-    static get LightYellow() { return "LightYellow"; }
-    static get Lime() { return "Lime"; }
-    static get LimeGreen() { return "LimeGreen"; }
-    static get Linen() { return "Linen"; }
-    static get Magenta() { return "Magenta"; }
-    static get Maroon() { return "Maroon"; }
-    static get MediumAquamarine() { return "MediumAquamarine"; }
-    static get MediumBlue() { return "MediumBlue"; }
-    static get MediumOrchid() { return "MediumOrchid"; }
-    static get MediumPurple() { return "MediumPurple"; }
-    static get MediumSeaGreen() { return "MediumSeaGreen"; }
-    static get MediumSlateBlue() { return "MediumSlateBlue"; }
-    static get MediumSpringGreen() { return "MediumSpringGreen"; }
-    static get MediumTurquoise() { return "MediumTurquoise"; }
-    static get MediumVioletRed() { return "MediumVioletRed"; }
-    static get MidnightBlue() { return "MidnightBlue"; }
-    static get MintCream() { return "MintCream"; }
-    static get MistyRose() { return "MistyRose"; }
-    static get Moccasin() { return "Moccasin"; }
-    static get NavajoWhite() { return "NavajoWhite"; }
-    static get Navy() { return "Navy"; }
-    static get OldLace() { return "OldLace"; }
-    static get Olive() { return "Olive"; }
-    static get OliveDrab() { return "OliveDrab"; }
-    static get Orange() { return "Orange"; }
-    static get OrangeRed() { return "OrangeRed"; }
-    static get Orchid() { return "Orchid"; }
-    static get PaleGoldenrod() { return "PaleGoldenrod"; }
-    static get PaleGreen() { return "PaleGreen"; }
-    static get PaleTurquoise() { return "PaleTurquoise"; }
-    static get PaleVioletRed() { return "PaleVioletRed"; }
-    static get PapayaWhip() { return "PapayaWhip"; }
-    static get PeachPuff() { return "PeachPuff"; }
-    static get Peru() { return "Peru"; }
-    static get Pink() { return "Pink"; }
-    static get Plum() { return "Plum"; }
-    static get PowderBlue() { return "PowderBlue"; }
-    static get Purple() { return "Purple"; }
-    static get Red() { return "Red"; }
-    static get RosyBrown() { return "RosyBrown"; }
-    static get RoyalBlue() { return "RoyalBlue"; }
-    static get SaddleBrown() { return "SaddleBrown"; }
-    static get Salmon() { return "Salmon"; }
-    static get SandyBrown() { return "SandyBrown"; }
-    static get SeaGreen() { return "SeaGreen"; }
-    static get SeaShell() { return "SeaShell"; }
-    static get Sienna() { return "Sienna"; }
-    static get Silver() { return "Silver"; }
-    static get SkyBlue() { return "SkyBlue"; }
-    static get SlateBlue() { return "SlateBlue"; }
-    static get SlateGray() { return "SlateGray"; }
-    static get Snow() { return "Snow"; }
-    static get SpringGreen() { return "SpringGreen"; }
-    static get SteelBlue() { return "SteelBlue"; }
-    static get Tan() { return "Tan"; }
-    static get Teal() { return "Teal"; }
-    static get Thistle() { return "Thistle"; }
-    static get Tomato() { return "Tomato"; }
-    static get Turquoise() { return "Turquoise"; }
-    static get Violet() { return "Violet"; }
-    static get Wheat() { return "Wheat"; }
-    static get White() { return "White"; }
-    static get WhiteSmoke() { return "WhiteSmoke"; }
-    static get Yellow() { return "Yellow"; }
-    static get YellowGreen() { return "YellowGreen"; }
-}
+export var Color;
+(function (Color) {
+    Color["AliceBlue"] = "#F0F8FF";
+    Color["AntiqueWhite"] = "#FAEBD7";
+    Color["Aqua"] = "#00FFFF";
+    Color["Aquamarine"] = "#7FFFD4";
+    Color["Azure"] = "#F0FFFF";
+    Color["Beige"] = "#F5F5DC";
+    Color["Bisque"] = "#FFE4C4";
+    Color["Black"] = "#000000";
+    Color["BlanchedAlmond"] = "#FFEBCD";
+    Color["Blue"] = "#0000FF";
+    Color["BlueViolet"] = "#8A2BE2";
+    Color["Brown"] = "#A52A2A";
+    Color["BurlyWood"] = "#DEB887";
+    Color["CadetBlue"] = "#5F9EA0";
+    Color["Chartreuse"] = "#7FFF00";
+    Color["Chocolate"] = "#D2691E";
+    Color["Coral"] = "#FF7F50";
+    Color["CornflowerBlue"] = "#6495ED";
+    Color["Cornsilk"] = "#FFF8DC";
+    Color["Crimson"] = "#DC143C";
+    Color["Cyan"] = "#00FFFE";
+    Color["DarkBlue"] = "#00008B";
+    Color["DarkCyan"] = "#008B8B";
+    Color["DarkGoldenrod"] = "#B8860B";
+    Color["DarkGray"] = "#A9A9A9";
+    Color["DarkGreen"] = "#006400";
+    Color["DarkKhaki"] = "#BDB76B";
+    Color["DarkMagenta"] = "#8B008B";
+    Color["DarkOliveGreen"] = "#556B2F";
+    Color["DarkOrange"] = "#FF8C00";
+    Color["DarkOrchid"] = "#9932CC";
+    Color["DarkRed"] = "#8B0000";
+    Color["DarkSalmon"] = "#E9967A";
+    Color["DarkSeaGreen"] = "#8FBC8F";
+    Color["DarkSlateBlue"] = "#483D8B";
+    Color["DarkSlateGray"] = "#2F4F4F";
+    Color["DarkTurquoise"] = "#00CED1";
+    Color["DarkViolet"] = "#9400D3";
+    Color["DeepPink"] = "#FF1493";
+    Color["DeepSkyBlue"] = "#00BFFF";
+    Color["DimGray"] = "#696969";
+    Color["DodgerBlue"] = "#1E90FF";
+    Color["Firebrick"] = "#B22222";
+    Color["FloralWhite"] = "#FFFAF0";
+    Color["ForestGreen"] = "#228B22";
+    Color["Fuchsia"] = "#FF00FE";
+    Color["Gainsboro"] = "#DCDCDC";
+    Color["GhostWhite"] = "#F8F8FF";
+    Color["Gold"] = "#FFD700";
+    Color["Goldenrod"] = "#DAA520";
+    Color["Gray"] = "#808080";
+    Color["Green"] = "#008000";
+    Color["GreenYellow"] = "#ADFF2F";
+    Color["Honeydew"] = "#F0FFF0";
+    Color["HotPink"] = "#FF69B4";
+    Color["IndianRed"] = "#CD5C5C";
+    Color["Indigo"] = "#4B0082";
+    Color["Ivory"] = "#FFFFF0";
+    Color["Khaki"] = "#F0E68C";
+    Color["Lavender"] = "#E6E6FA";
+    Color["LavenderBlush"] = "#FFF0F5";
+    Color["LawnGreen"] = "#7CFC00";
+    Color["LemonChiffon"] = "#FFFACD";
+    Color["LightBlue"] = "#ADD8E6";
+    Color["LightCoral"] = "#F08080";
+    Color["LightCyan"] = "#E0FFFF";
+    Color["LightGoldenrodYellow"] = "#FAFAD2";
+    Color["LightGreen"] = "#90EE90";
+    Color["LightGray"] = "#D3D3D3";
+    Color["LightPink"] = "#FFB6C1";
+    Color["LightSalmon"] = "#FFA07A";
+    Color["LightSeaGreen"] = "#20B2AA";
+    Color["LightSkyBlue"] = "#87CEFA";
+    Color["LightSlateGray"] = "#778899";
+    Color["LightSteelBlue"] = "#B0C4DE";
+    Color["LightYellow"] = "#FFFFE0";
+    Color["Lime"] = "#00FF00";
+    Color["LimeGreen"] = "#32CD32";
+    Color["Linen"] = "#FAF0E6";
+    Color["Magenta"] = "#FF00FF";
+    Color["Maroon"] = "#800000";
+    Color["MediumAquamarine"] = "#66CDAA";
+    Color["MediumBlue"] = "#0000CD";
+    Color["MediumOrchid"] = "#BA55D3";
+    Color["MediumPurple"] = "#9370DB";
+    Color["MediumSeaGreen"] = "#3CB371";
+    Color["MediumSlateBlue"] = "#7B68EE";
+    Color["MediumSpringGreen"] = "#00FA9A";
+    Color["MediumTurquoise"] = "#48D1CC";
+    Color["MediumVioletRed"] = "#C71585";
+    Color["MidnightBlue"] = "#191970";
+    Color["MintCream"] = "#F5FFFA";
+    Color["MistyRose"] = "#FFE4E1";
+    Color["Moccasin"] = "#FFE4B5";
+    Color["NavajoWhite"] = "#FFDEAD";
+    Color["Navy"] = "#000080";
+    Color["OldLace"] = "#FDF5E6";
+    Color["Olive"] = "#808000";
+    Color["OliveDrab"] = "#6B8E23";
+    Color["Orange"] = "#FFA500";
+    Color["OrangeRed"] = "#FF4500";
+    Color["Orchid"] = "#DA70D6";
+    Color["PaleGoldenrod"] = "#EEE8AA";
+    Color["PaleGreen"] = "#98FB98";
+    Color["PaleTurquoise"] = "#AFEEEE";
+    Color["PaleVioletRed"] = "#DB7093";
+    Color["PapayaWhip"] = "#FFEFD5";
+    Color["PeachPuff"] = "#FFDAB9";
+    Color["Peru"] = "#CD853F";
+    Color["Pink"] = "#FFC0CB";
+    Color["Plum"] = "#DDA0DD";
+    Color["PowderBlue"] = "#B0E0E6";
+    Color["Purple"] = "#800080";
+    Color["Red"] = "#FF0000";
+    Color["RosyBrown"] = "#BC8F8F";
+    Color["RoyalBlue"] = "#4169E1";
+    Color["SaddleBrown"] = "#8B4513";
+    Color["Salmon"] = "#FA8072";
+    Color["SandyBrown"] = "#F4A460";
+    Color["SeaGreen"] = "#2E8B57";
+    Color["SeaShell"] = "#FFF5EE";
+    Color["Sienna"] = "#A0522D";
+    Color["Silver"] = "#C0C0C0";
+    Color["SkyBlue"] = "#87CEEB";
+    Color["SlateBlue"] = "#6A5ACD";
+    Color["SlateGray"] = "#708090";
+    Color["Snow"] = "#FFFAFA";
+    Color["SpringGreen"] = "#00FF7F";
+    Color["SteelBlue"] = "#4682B4";
+    Color["Tan"] = "#D2B48C";
+    Color["Teal"] = "#008080";
+    Color["Thistle"] = "#D8BFD8";
+    Color["Tomato"] = "#FF6347";
+    Color["Turquoise"] = "#40E0D0";
+    Color["Violet"] = "#EE82EE";
+    Color["Wheat"] = "#F5DEB3";
+    Color["White"] = "#FFFFFF";
+    Color["WhiteSmoke"] = "#F5F5F5";
+    Color["Yellow"] = "#FFF000";
+    Color["YellowGreen"] = "#9ACD32";
+})(Color || (Color = {}));
+//# sourceMappingURL=color.js.map
