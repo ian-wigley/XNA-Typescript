@@ -25,5 +25,4 @@ $RECYCLE.BIN/
 XNA-TS/XNA-TS/XNA-TS/obj/
 *.cs
 *.config
-XNA-TS/XNA-TS-VSCode/out/*.map
-XNA-TS/XNA-TS-VSCode/out/*.js
+XNA-TS/XNA-TS-VSCode/out/*.*
