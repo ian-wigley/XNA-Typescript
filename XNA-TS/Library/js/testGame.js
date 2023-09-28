@@ -1,6 +1,6 @@
 import { Game } from "../lib/game.js";
-import { GraphicsDeviceManager } from "../lib/graphicsdevicemanager.js";
-import { SpriteBatch } from "../lib/spritebatch.js";
+import { GraphicsDeviceManager } from "../lib/graphicsDeviceManager.js";
+import { SpriteBatch } from "../lib/spriteBatch.js";
 import { Color } from "../lib/color.js";
 
 /// <summary>
@@ -20,7 +20,7 @@ export class TestGame extends Game {
     /// </summary>
     Initialize() {
         // TODO: Add your initialization logic here
-        super.Initialize();
+        super.Initialize(this);
     }
     /// <summary>
     /// LoadContent will be called once per game and is the place to load
