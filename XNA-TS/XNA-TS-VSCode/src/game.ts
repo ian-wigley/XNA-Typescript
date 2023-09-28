@@ -34,7 +34,6 @@ export class Game {
     constructor() {
         this.maximumElapsedTime = new TimeSpan(0);
         this.content = new ContentManager();
-        this.spriteBatch = new SpriteBatch();
         this.clock = new GameClock();
         this.maximumElapsedTime = this.maximumElapsedTime.FromMilliseconds(500.0);
         this.totalGameTime = new TimeSpan(0);
@@ -44,7 +43,7 @@ export class Game {
         this.inactiveSleepTime = this.inactiveSleepTime.FromMilliseconds(20.0);
     }
 
-    public Run(gameTime): void {
+    public Run(gameTime: GameTime): void {
         this.Draw(gameTime);
     }
 
@@ -106,18 +105,18 @@ export class Game {
     public RunGame(useBlockingRun: boolean): void {
         try {
             this.inRun = true;
-            this.gameTime.ElapsedGameTime.Zero;
+            this.gameTime.ElapsedGameTime = this.gameTime.ElapsedGameTime.Zero;
             this.gameTime.TotalGameTime = this.totalGameTime;
             this.gameTime.IsRunningSlowly = false;
             this.Update(this.gameTime);
             this.doneFirstUpdate = true;
-            if (useBlockingRun) {
-            }
+            if (useBlockingRun) { }
             else {
                 this.endRunRequired = true;
             }
         }
-        catch (__ex__) {
+        catch (ex) {
+            alert(ex);
         }
         finally {
             if (!this.endRunRequired) {
