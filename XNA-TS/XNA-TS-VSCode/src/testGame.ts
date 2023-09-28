@@ -1,5 +1,5 @@
 import { Game } from "./game.js";
-import { SpriteBatch, SpriteEffects, Texture2D } from "./spriteBatch.js";
+import { SpriteBatch } from "./spriteBatch.js";
 import { GraphicsDeviceManager } from "./graphicsDeviceManager.js";
 import { GameTime } from "./gameTime.js";
 import { Color } from "./color.js";
@@ -8,13 +8,13 @@ import { Color } from "./color.js";
 /// This is the main type for your game
 /// </summary>
 export class TestGame extends Game {
-    graphics: GraphicsDeviceManager;
-    //spriteBatch: SpriteBatch;
+
+    private graphics: GraphicsDeviceManager;
 
     constructor() {
         super();
         this.graphics = new GraphicsDeviceManager(this);
-        // this.Content.RootDirectory = "Content";
+        this.Content.RootDirectory = "Content";
     }
 
     /// <summary>
@@ -36,7 +36,7 @@ export class TestGame extends Game {
         // Create a new SpriteBatch, which can be used to draw textures.
         this.spriteBatch = new SpriteBatch();
 
-        // TODO: use this.Content to load your game content here
+        // TODO: use this to load your game content here
     }
 
     /// <summary>
