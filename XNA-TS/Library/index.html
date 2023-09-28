@@ -16,8 +16,9 @@
     <script type="module">
         import {TestGame} from "./js/testGame.js"
         let game = new TestGame();
+        game.Initialize();
         game.RunGame(true);
-        setInterval(() => game.Tick(), 13);
+        game.Tick();
     </script>
 </body>
 
