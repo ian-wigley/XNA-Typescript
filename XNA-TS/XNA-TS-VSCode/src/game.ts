@@ -217,7 +217,7 @@ export class Game {
         this.doneFirstUpdate = true;
     }
 
-    protected Initialize(caller): void {
+    protected Initialize(caller: any): void {
         caller.LoadContent();
     }
 }
