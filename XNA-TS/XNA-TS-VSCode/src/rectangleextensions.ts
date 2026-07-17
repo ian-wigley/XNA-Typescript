@@ -2,9 +2,7 @@ import { Vector2 } from "./vector2.js";
 
 export class RectangleExtensions {
 
-    constructor(){}
-
-    public GetIntersectionDepth(rectA: any, rectB: any): Vector2 {
+    public static GetIntersectionDepth(rectA: any, rectB: any): Vector2 {
         var halfWidthA = rectA.Width / 2.0;
         var halfHeightA = rectA.Height / 2.0;
         var halfWidthB = rectB.Width / 2.0;
@@ -22,7 +20,7 @@ export class RectangleExtensions {
         return new Vector2(depthX, depthY);
     }
 
-    public GetBottomCenter(rect: any): Vector2 {
+    public static GetBottomCenter(rect: any): Vector2 {
         return new Vector2(rect.X + rect.Width / 2.0, rect.Bottom);
     }
 }
