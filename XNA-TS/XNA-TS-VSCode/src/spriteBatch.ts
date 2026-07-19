@@ -19,11 +19,11 @@ export class SpriteBatch {
     }
 
     // Overloaded signitures
-    Draw(texture: Texture2D, param2: any, param3?: Color | Rectangle):void;
+    Draw(texture: Texture2D, param2: any, param3?: number | Color | Rectangle, param4?: any, param5?: any, param6?: any, param7?: any, param8?: any, param9?: any): void;
     public Draw(texture: Texture2D, param2: any, param3?: any, param4?: any, param5?: any, param6?: any, param7?: any, param8?: any, param9?: any): void {
 
         if (!param4) {
-        // if (typeof (param2) == "number" && typeof (param3) =="number" ) {
+            // if (typeof (param2) == "number" && typeof (param3) =="number" ) {
             this.ctx.drawImage(texture, param2, param3);
         }
         else {
