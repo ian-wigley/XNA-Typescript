@@ -30,6 +30,7 @@ export class SpriteBatch {
             this.ctx.drawImage(texture, param2, param3, param4, param5, param6, param7, param8, param9);
         }
 
+        // TODO
         // if (param2 instanceof Vector2 && typeof (param3) == "string" && !param4 && !param5 && !param6 && !param7 && !param8 && !param9) {
         //     this.ctx.drawImage(texture, param2.X, param2.Y);
         // }
@@ -74,7 +75,7 @@ export class SpriteBatch {
         this.ctx.fillText(value, position.X, position.Y);
     }
 
-    public DrawButton(button: any){
+    public DrawButton(button: any): void {
         button.draw(this.ctx);
     }
 
