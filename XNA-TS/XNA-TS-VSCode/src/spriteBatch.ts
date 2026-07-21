@@ -68,11 +68,14 @@ export class SpriteBatch {
 
     }
 
-
     public DrawString(font: any, value: any, position: any, color: any): void {
         this.ctx.font = font;
         this.ctx.fillStyle = color;
         this.ctx.fillText(value, position.X, position.Y);
+    }
+
+    public DrawButton(button: any){
+        button.draw(this.ctx);
     }
 
     public Begin(): void {
